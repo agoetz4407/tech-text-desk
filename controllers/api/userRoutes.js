@@ -48,6 +48,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+//create user route
 router.post('/', (req, res) => {
   // JSON req.body object should include "username", "email", and "password" properties
   User.create({
@@ -71,6 +72,7 @@ router.post('/', (req, res) => {
     });
 });
 
+//user login route
 router.post('/login', (req, res) => {
   // JSON req.body object should include "email" and "password" properties
   User.findOne({
@@ -113,6 +115,7 @@ router.post('/logout', (req, res) => {
   }
 });
 
+//update a user's info route
 router.put('/:id', (req, res) => {
   // JSON req.body object should include "username", "email", and "password" properties
   User.update(req.body, {
@@ -135,6 +138,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+//delete a user
 router.delete('/:id', (req, res) => {
   User.destroy({
     where: {
