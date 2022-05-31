@@ -116,6 +116,7 @@ router.post('/logout', (req, res) => {
 });
 
 //update a user's info route
+//TODO: add changing password verification, possibly with a hook
 router.put('/:id', (req, res) => {
   // JSON req.body object should include "username", "email", and "password" properties
   User.update(req.body, {
