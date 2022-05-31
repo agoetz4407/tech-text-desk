@@ -2,7 +2,8 @@ const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
 
-//TODO: associations
+//TODO: analyze associations, good so far
+
 User.hasMany(Post, {
     foreignKey: 'user_id'
 });
